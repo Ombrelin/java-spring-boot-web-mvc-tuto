@@ -1,0 +1,8 @@
+<form th:action="@{/hello-world/salute}"  th:object="${person}" method="post">
+  <input th:field="*{firstName}" type="text"/>
+  <input th:field="*{lastName}" type="text"/>
+  <input type="submit" value="Say hello !"/>
+</form>
+
+
+<p th:if="${sessionValue} != null" th:text="${sessionValue}"></p>

@@ -1,0 +1,9 @@
+<div th:each="person: ${persons}">
+    <a th:href="'/persons/' + ${person.id}"><span  th:text="${person.firstName}"></span> <span th:text="${person.lastName}"></span></a>
+</div>
+
+<form th:action="@{/persons}" th:object="${person}" method="post">
+    <input th:field="*{firstName}" type="text"/>
+    <input th:field="*{lastName}" type="text"/>
+    <input type="submit" value="Save"/>
+</form>
